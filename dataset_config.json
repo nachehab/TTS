@@ -1,0 +1,7 @@
+{
+  "dataset_name": "custom_dataset",
+  "meta_file_train": "metadata.csv",
+  "meta_file_val": "",
+  "path": "./WAV",
+  "formatter": "ljspeech"
+}

@@ -1,0 +1,37 @@
+{
+  "model": "tacotron2",
+  "output_path": "./tts_output",
+  "dataset_config": "dataset_config.json",
+  "audio": {
+    "sample_rate": 22050,
+    "win_length": 1024,
+    "hop_length": 256,
+    "fft_size": 1024,
+    "num_mels": 80
+  },
+  "model_args": {
+    "num_chars": 148,
+    "out_channels": 80,
+    "embedding_size": 512,
+    "encoder_hidden_size": 512,
+    "decoder_hidden_size": 1024,
+    "prenet_hidden_size": 256,
+    "postnet_hidden_size": 512,
+    "num_decoder_layers": 2,
+    "dropout": 0.5,
+    "stopnet": true,
+    "use_attention": true
+  },
+  "trainer": {
+    "batch_size": 32,
+    "eval_batch_size": 16,
+    "epochs": 100,
+    "lr": 0.001,
+    "grad_clip": 1.0,
+    "use_mixed_precision": false,
+    "log_interval": 25,
+    "eval_interval": 100,
+    "save_interval": 500,
+    "output_path": "./tts_output"
+  }
+}
