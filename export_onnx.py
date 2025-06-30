@@ -20,7 +20,7 @@ ap = AudioProcessor.init_from_config(config)
 
 # Initialize tokenizer
 tokenizer, config = TTSTokenizer.init_from_config(config)
-config.num_chars = tokenizer.tokenizer.num_chars
+config.num_chars = tokenizer.characters.num_chars
 config.encoder_hidden_channels = 192  # use your trained config value if different
 
 # Build model
